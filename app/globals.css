@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{--bg-from:255 255 255; --bg-to:236 248 255;}
+body{background: linear-gradient(180deg, rgb(var(--bg-to)) 0%, rgb(var(--bg-from)) 100%);}
+.shadow-soft{box-shadow:0 6px 30px rgba(0,0,0,.07);}
+.card{ @apply rounded-3xl border border-slate-200/60 bg-white/85 backdrop-blur p-6 shadow-soft; }
+.btn{ @apply inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-medium transition; }
+.btn-primary{ @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+.btn-ghost{ @apply btn bg-white border hover:bg-slate-50; }
+.pill{ @apply px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs; }
+.badge{ @apply px-2 py-1 rounded-xl bg-brand-50 text-brand-800 border border-brand-100 text-xs font-semibold; }
+.timeline{ @apply relative pl-6; }
+.timeline:before{ content:""; position:absolute; left:8px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,#c7e8ff,#94d3ff); }
+.node{ @apply relative mb-5; }
+.node-dot{ content:""; position:absolute; left:-1px; top:4px; width:12px; height:12px; border-radius:9999px; background:#22B0FF; box-shadow:0 0 0 4px rgba(34,176,255,.15); }
+.title{ @apply text-3xl md:text-5xl font-extrabold leading-tight; }
+.subtitle{ @apply mt-3 text-slate-600 text-base md:text-lg; }
